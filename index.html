@@ -14,7 +14,7 @@
             <h1>Pesquisa SenaiTec</h1>
         </header>
         <section>
-            <form action="" method="get">
+            <form action="https://formspree.io/f/xaeeygok" method="post">
                 <fieldset>
                     <legend>Dados pessoais</legend>
                     
@@ -39,7 +39,7 @@
                     
                     <label for="userPhone">Telefone:</label>
                     <input type="tel" name="userPhone" id="userPhone"
-                    pattern="[0-1]{11}" placeholder="21999930595">
+                    pattern="[0-9]{11}" placeholder="21999930595">
                     <br>
                     
                     <label for="userImage">Upload da foto:</label>
@@ -71,7 +71,7 @@
                     </select>
                     <br>
                     <label for="UserEstado">Estado</label>
-                    <select name="UserEstado" id="UserEstado">
+                    <select name="UserEstado" id="UserEstado" required>
                         
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
@@ -158,15 +158,27 @@
                     <br>
                     <label for="userComment">Deixe seu comentário</label>
                     <textarea name="userComment" id="userComment"></textarea>
+                </fieldset>
 
+                <fieldset>
+                     
+                    <legend>Confirmações</legend>
+                    <input type="checkbox" name="UserLGPD" id="UserLGPD1" required>
+                    <label for="UserLGPD1">Li e aceito os termos de uso</label>
+                    <br>
 
-                    
+                    <input type="checkbox" name="userTerms" id="userTerms2" value="aceito" required>
+                    <label for="userTerms2">Eu aceito participar das pesquisas</label>
+                    <br>
 
-                    
+                    <input type="checkbox" name="userConfirmemail" id="userConfirmemail" value="aceito">
+                    <label for="userConfirmemail">Desejo receber os resultados por email</label>
+                    <br>
                 </fieldset>
                 
               
                 <button type="submit">Enviar</button>
+                <button type="reset">limpar</button>
             </form>
         </section>
     </main>
